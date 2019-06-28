@@ -16,11 +16,12 @@
     <script type="text/javascript">
         $(function () {
             $(".delete").click(function () {
+                var obj=$(this);
                 var id = this.title;
                 alert(id);
                 $.post("/user/delete/"+id,{},function (data) {
 
-                       $(this.title).parent().parent().remove();
+                       $(obj).parent().parent().remove();
 
 
                 });
